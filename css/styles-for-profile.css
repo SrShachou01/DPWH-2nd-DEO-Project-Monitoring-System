@@ -1,0 +1,324 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #2C5B8C 42%, #AF8B84 85%);
+    margin: 0;
+    height: 100%;
+}
+
+/* Ensure content section fills the screen */
+#content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure that main content grows to fill space */
+.main-content {
+    flex-grow: 1;
+}
+
+/* Sidebar Styles Assuming sidebar inclusion */
+.sidebar {
+    min-width: 250px;
+    border-right: 1px solid #dee2e6;
+}
+
+/* Card Styling for Profile and Projects */
+.card {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+/* Profile and Projects Section Header */
+.card-header {
+    background-color: #E67040;
+    color: white;
+    padding-top: 10px;
+    text-align: left;
+}
+
+/* Profile Image in Profile Card */
+.profile-img-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.edit-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    color: #007bff;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 100;
+    transition: background-color 0.3s;
+}
+
+.edit-icon:hover {
+    background-color: #f0f0f0;
+}
+
+/* Modal Styling */
+.modal-content {
+    border-radius: 8px;
+}
+
+.modal-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.modal-footer .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Profile Section */
+.profile-section {
+    padding-top: 20px;
+}
+
+.profile-section .card-header {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 50px;
+}
+
+.profile-section .card-body {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.profile-details .col-12.text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-details .card-title {
+    margin-top: 10px;
+}
+
+.profile-details .additional-info p {
+    margin-bottom: 5px;
+}
+
+/* Projects Section */
+.projects-section {
+    padding-top: 20px;
+    height: 100%; /* Increase height */
+}
+
+.projects-section .card-body {
+    padding: 15px;
+}
+
+.projects-table-responsive {
+    max-height: 400px; /* Adjusted for larger screens */
+    overflow-y: auto;
+}
+
+.projects-table-responsive table tbody tr td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* Profile Button */
+.profile-button {
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+/* Additional Styling Enhancements */
+.projects-table-responsive {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.additional-info {
+    padding-top: 15px;
+}
+
+/* Adjust spacing between paragraphs in the additional-info section */
+.additional-info p {
+    margin-bottom: 0.5rem;
+}
+
+/* Adjustments for larger screens (1920x1200 or larger) */
+@media (min-width: 1200px) and (min-height: 1200px) {
+    /* Increase the height of profile card container for better usage */
+    .card {
+        padding: 15px;
+    }
+
+    /* Adjust the profile image container size */
+    .profile-img-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Increase padding in the card header and body */
+    .card-header {
+        padding: 15px 20px;
+        font-size: 1.3rem;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    /* Increase button size for easier use on larger screens */
+    .btn {
+        padding: 14px 22px;
+        font-size: 1.2rem;
+    }
+
+    /* Increase the spacing in the profile details section */
+    .profile-details {
+        margin-bottom: 30px;
+    }
+
+    /* Adjust table max-height for larger screens */
+    .projects-table-responsive {
+        max-height: 400px; /* Adjusted for larger screens */
+    }
+
+    /* Adjust padding of the additional info section */
+    .additional-info {
+        padding-top: 15px;
+    }
+
+    /* Adjust table row padding */
+    .projects-table-responsive table tbody tr td {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    /* Make the profile details more centered */
+    .profile-details .col-12.text-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+}
+
+/* Make the entire layout more flexible for smaller screens */
+@media (max-width: 1000px) {
+    .sidebar {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .col-md-4, .col-md-8 {
+        flex: 0 0 100%;
+        max-width: 150%;
+    }
+
+    .text-md-left {
+        text-align: center !important;
+    }
+}
+
+/* Ensure sections don't overlap */
+.profile-section, .projects-section {
+    margin-bottom: 30px;
+}
+
+/* Make the entire layout more flexible */
+.profile-section, .projects-section {
+    height: 800px; /* Increased height */
+}
+
+/* Section Headers */
+.section-header {
+    background-color: #E67040;
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Section Bodies */
+.section-body {
+    padding: 15px;
+    background-color: #004085;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+/* Table Styling */
+.table {
+    background-color: #004085;
+    margin-top: 20px;
+    color: white;
+}
+
+.table tbody tr td {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: white;
+}
+
+/* Remove Card-Specific Styling */
+.card {
+    box-shadow: none;
+    border: none;
+}
+
+/* Profile Image Styling */
+.profile-img-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.edit-profile-button {
+    background-color: #E67040;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+.edit-profile-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.edit-profile-button a:hover {
+    color: #f8f9fa;
+    text-decoration: none;
+}

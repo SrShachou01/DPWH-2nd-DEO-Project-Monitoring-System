@@ -1,0 +1,173 @@
+
+
+/* Body and overall container styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+}
+
+/* Sidebar and content layout */
+#content {
+    margin-left: 250px;
+    padding: 20px;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease;
+}
+
+/* Sidebar Styles Assuming sidebar inclusion */
+.sidebar {
+    min-width: 250px;
+    border-right: 1px solid #dee2e6;
+}
+
+.cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px; /* Uniform gap between cards */
+}
+
+.cards-row a {
+  flex: 0 0 auto;
+  text-decoration: none; /* Remove default anchor styling */
+}
+
+/* Card width relative to container width */
+.dashboard-card {
+  width: 350px;   /* Fixed width */
+  height: 160px;  /* Fixed height */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  /* Center card content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* Card body styling */
+.dashboard-card .card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Card logo (icon) styling */
+.dashboard-card .card-logo {
+  font-size: 3rem;
+  color: #3498db;
+}
+
+/* Card title and text styling */
+.dashboard-card .card-title {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: black;
+}
+
+.dashboard-card .card-text {
+  font-size: 1.25rem;
+  color: black;
+}
+
+/* Table styling for project history */
+.custom-table {
+    margin-top: 20px;
+    height: 100%;
+}
+
+.custom-table .table {
+    border-collapse: collapse;
+    width: 100%;  /* Use full width to allow scrolling */
+
+}
+
+.custom-table .table th,
+.custom-table .table td {
+    padding: 10px;
+    text-align: center;
+}
+
+.custom-table .table th {
+    position: sticky;
+    top: 0;
+    background: #ff7f00; /* Vibrant Orange */
+    color: #fff;
+    z-index: 1;
+}
+
+.custom-table .table td {
+    vertical-align: middle;
+    border: 1px solid #ddd; /* Add a light border for table cells */
+    background-color: #f3b178; /* Orange background for the header */
+    opacity: .7;
+    color: black;
+}
+
+.custom-table .table tr:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+}
+
+
+/* Ensure the .cards-row adjusts when sidebar is collapsed */
+#sidebar.collapsed + #content .cards-row {
+    width: calc(100% - 80px); /* Adjust width to match the remaining space */
+    margin-left: 80px; /* Adjust margin to align properly */
+}
+
+/* Styling for cards inside the .cards-row */
+.cards-row .card {
+    width: 100%; /* Adjust to fit 5 cards in a row (100% / 5 = 20%, but we give some margin) */
+    margin-right: 2%;
+    margin-bottom: 20px;
+}
+
+/* Remove margin for the last card */
+.cards-row .card:last-child {
+    margin-right: 0;
+}
+
+
+/* Responsive card widths */
+.dashboard-card {
+    width: 200px; /* Default width */
+    transition: width 0.3s ease-in-out; /* Smooth transition for width change */
+}
+
+/* Card width when sidebar is collapsed */
+#sidebar.collapsed ~ #content .dashboard-card {
+    width: 250px; /* Increase width when sidebar is collapsed */
+}
+
+/* Center the content when sidebar is collapsed */
+#content {
+    margin-left: 0; /* Remove the left margin if any */
+}
+
+/* Mobile / Android view adjustments */
+@media (max-width: 480px) {
+  /* The fixed dimensions remain the same on mobile */
+  .dashboard-card {
+    width: 200px;
+    height: 160px;
+  }
+  
+  /* Adjust padding and font sizes for better fit on small screens */
+  .dashboard-card .card-body {
+    padding: 20px;
+  }
+  
+  .dashboard-card .card-logo {
+    font-size: 2.5rem;
+  }
+  
+  .dashboard-card .card-title {
+    font-size: 0.9rem;
+  }
+  
+  .dashboard-card .card-text {
+    font-size: 1rem;
+  }
+}

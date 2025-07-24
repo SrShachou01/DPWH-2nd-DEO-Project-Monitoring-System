@@ -1,0 +1,246 @@
+:root {
+    --transition-duration: 0.5s;
+    --sds-color-text-default-default: #000;
+    --sds-size-radius-200: 8px;
+    --sds-color-background-default-default: rgba(218, 214, 202, 0.90);
+    --sds-color-background-brand-default: #be6432;
+    --sds-color-text-brand-on-brand: #fff;
+    --login-form-width: 300px;
+    --register-form-width: 400px;
+    --orange-section-width: 25%;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, sans-serif;
+}
+
+body {
+    background: url('https://web.facebook.com/photo/?fbid=164404659207271&set=a.164404645873939') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.left-content {
+    background-color: var(--sds-color-background-brand-default);
+    color: var(--sds-color-text-brand-on-brand);
+    width: var(--orange-section-width);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: transform var(--transition-duration);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    left: 0;
+}
+
+.right-content {
+    width: calc(100% - var(--orange-section-width));
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform var(--transition-duration);
+    z-index: 1;
+    right: 0;
+}
+
+.form-card {
+    background-color: var(--sds-color-background-default-default);
+    padding: 20px;
+    border-radius: var(--sds-size-radius-200);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: var(--register-form-width);
+    box-sizing: border-box;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#login-form, #register-form {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-title {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.form-link {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.two-columns {
+    display: flex;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+}
+
+.input-label {
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-field {
+    border: 1px solid #ddd;
+    border-radius: var(--sds-size-radius-200);
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+}
+
+.checkbox-label {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.button {
+    background-color: rgba(128, 0, 128, 1);
+    color: #fff;
+    border-radius: var(--sds-size-radius-200);
+    padding: 12px 20px;
+    font: 700 16px/100% Inter, sans-serif;
+    margin-top: 20px;
+    text-align: center;
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.transition-link {
+    color: var(--sds-color-text-default-default);
+    text-decoration: underline;
+}
+
+.login-page .left-content {
+    left: 0;
+}
+
+.login-page .right-content {
+    left: var(--orange-section-width);
+}
+
+.register-page .left-content {
+    right: 0;
+    left: auto;
+}
+
+.register-page .right-content {
+    right: var(--orange-section-width);
+    left: auto;
+}
+
+.sidebar-top {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.logo-image {
+    width: 26%;
+    height: auto;
+    margin-right: 10px;
+}
+
+.sidebar-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidebar-content {
+    margin: 20px;
+    padding: 10px;
+}
+
+.main-message {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.mode-message {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sidebar-text {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .form-card {
+        width: calc(100% - 20px);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft var(--transition-duration) forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight var(--transition-duration) forwards;
+}

@@ -1,0 +1,736 @@
+/* css/styles-for-main.css */
+
+/* Global Styles */
+body {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+  padding: 0 20px;
+  background-color: #1a476f;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 95px;
+  z-index: 1000;
+}
+
+/* Specific Toggle Button Styles */
+.navbar .btn-toggle {
+  background-color: #333;
+  color: #fff;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar .btn-toggle:hover {
+  background-color: #555;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+.navbar .btn-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Navbar Brand (DPWH Icon and Name) Styles */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.navbar-title h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.navbar-title h5 {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+/* Middle Navbar Buttons */
+.navbar-middle-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the buttons horizontally */
+}
+
+.navbar-middle-icons .nav-button.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent; /* Transparent background */
+  color: #fff;
+  border: none;
+  padding: 10px 16px; /* Consistent padding */
+  font-size: 1rem; /* Consistent font size */
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-left: 5px; /* Reduced spacing between buttons */
+}
+
+.navbar-middle-icons .nav-button.nav-icon i {
+  margin-right: 8px; /* Consistent margin between icon and text */
+  font-size: 1.2rem; /* Consistent icon size */
+}
+
+.navbar-middle-icons .nav-button.nav-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.navbar-middle-icons .nav-button.nav-icon:active {
+  transform: scale(0.95);
+}
+
+/* Dropdown Menu Styles for Navbar Middle Icons */
+.navbar-middle-icons .dropdown-menu {
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  min-width: 200px;
+}
+
+.navbar-middle-icons .dropdown-item {
+  color: #333;
+  padding: 10px 20px;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-middle-icons .dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+.navbar-middle-icons .dropdown-item i {
+  margin-right: 8px;
+  color: #007bff;
+}
+
+/* User Profile Dropdown */
+.navbar-user {
+  position: relative;
+}
+
+.navbar-user a.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-user-pic {
+  width: 50px; /* Increased size */
+  height: 50px; /* Increased size */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.navbar-user-name {
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 1rem; /* Increased font size */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.dropdown-item {
+  color: #333;
+  padding: 10px 20px;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-item i {
+  margin-right: 8px;
+  color: #007bff;
+}
+
+/* Sidebar Styles */
+#sidebar {
+  width: 300px; /* Expanded width */
+  height: 100%;
+  background: #1a4a73;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Changed to flex-start for proper stacking */
+  overflow: hidden;
+  transition: width 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+#sidebar.collapsed {
+  width: 0px; /* Collapsed width */
+}
+
+/* Sidebar Header */
+.sidebar-header-container {
+  flex-shrink: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #1a4a73;
+}
+
+.sidebar-header img {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+}
+
+.sidebar-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-title h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.sidebar-title h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* Hide header and footer when collapsed */
+#sidebar.collapsed .sidebar-header,
+#sidebar.collapsed .sidebar-footer {
+  display: none;
+}
+
+/* Profile Information Styles */
+.profile-info {
+  text-align: center;
+  padding: 10px; /* Reduced padding for better spacing */
+  margin-bottom: 10px; /* Adjusted margin */
+  flex-shrink: 0;
+}
+
+.profile-info img.profile-pic {
+  width: 100px; /* Increased size */
+  height: 100px; /* Increased size */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px; /* Increased margin */
+}
+
+.profile-info .profile-details h4 {
+  font-size: 20px; /* Increased font size */
+  margin: 5px 0;
+}
+
+.profile-info .profile-details h5 {
+  font-size: 16px; /* Increased font size */
+  color: #ccc;
+  margin: 4px 0;
+}
+
+.profile-info .profile-details p {
+  font-size: 14px; /* Increased font size */
+  margin: 3px 0;
+}
+
+/* Hide profile info when collapsed */
+#sidebar.collapsed .profile-info {
+  display: none;
+}
+
+/* Profile Buttons Styles */
+.profile-buttons a.sidebar-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 4px;
+  margin: 5px 0; /* Added margin between buttons */
+}
+
+.profile-buttons a.sidebar-button .icon {
+  margin-right: 10px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.profile-buttons a.sidebar-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+}
+
+.profile-buttons a.sidebar-button:active {
+  transform: scale(0.98);
+}
+
+/* New "My Projects" Button Styles */
+.my-projects-button {
+  text-align: center;
+  padding: 0px 20px;
+  flex-shrink: 0;
+}
+
+.btn-my-projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E67040;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-my-projects i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.btn-my-projects:hover {
+  background-color: #d2673f;
+  transform: translateY(-2px);
+}
+
+.btn-my-projects:active {
+  transform: translateY(0);
+}
+
+/* Navigation Styles */
+/* Note: The components section is left unmodified as per your instruction */
+.components {
+  font-size: 16px; /* Consistent text size */
+  flex-grow: 1; /* Makes the components list take up available space */
+  overflow-y: auto; /* Enables vertical scrolling */
+  padding-bottom: 20px; /* Adds padding at the bottom for spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the components horizontally */
+  margin-left: -40px;
+}
+
+.components li {
+  list-style: none;
+  margin: 8px 0; /* Adjusted the margin to 8px */
+  width: 90%; /* Ensures the menu items don't stretch fully */
+}
+
+/* Style for main menu links and dropdown toggle buttons */
+.components a,
+.components button.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.components a:hover,
+.components button.dropdown-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Icon and Text spacing */
+.components .icon {
+  margin-right: 30px; /* Increased space between icon and text */
+  min-width: 30px; /* Ensures icons are aligned */
+  text-align: center;
+}
+
+.components .text {
+  flex-grow: 1;
+}
+
+/* Dropdown Menu Styles */
+.components ul.collapse {
+  padding-left: 20px; /* Indent dropdown items */
+  background-color: #41688a; /* Slightly different background for dropdowns */
+  width: 100%; /* Ensure dropdowns take full width */
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.components ul.collapse li {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.components ul.collapse li a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.components ul.collapse li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown Arrow Indicator - CSS Triangle */
+.navbar-middle-icons .dropdown-toggle::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 8px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  transition: transform 0.3s;
+}
+
+.navbar-middle-icons .dropdown.show > .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+/* Ensure Buttons Have No Outline on Focus */
+.navbar-middle-icons .dropdown-toggle:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-user .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+/* Sidebar Footer Styles */
+.sidebar-footer {
+  flex-shrink: 0;
+  padding: 20px;
+}
+
+.btn-logout {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.btn-logout i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.btn-logout:hover {
+  background-color: #ff9d00;
+  color: white;
+}
+
+/* Revamped Sidebar Icons Strip as Four Squares */
+#sidebar-strip {
+  background-color: transparent; /* Remove background */
+  width: 70px; /* Width of the strip */
+  height: auto;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.strip-square {
+  width: 50px;
+  height: 50px;
+  background-color: #bf5d30;
+  color: white;
+  margin: 10px 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.strip-square:hover {
+  background-color: #d2673f;
+  transform: translateY(-5px);
+}
+
+.strip-square i {
+  font-size: 1.5rem;
+}
+
+/* Adjust visibility based on sidebar state */
+#sidebar.collapsed + #sidebar-strip {
+  /* When sidebar is collapsed, keep strip visible */
+  display: flex;
+}
+
+#sidebar:not(.collapsed) + #sidebar-strip {
+  /* When sidebar is expanded, hide strip */
+  display: none;
+}
+
+/* Main Content Styles */
+#content {
+  margin-left: 300px; /* Expanded sidebar width */
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 95px 20px 20px 20px; /* Top padding to match navbar */
+  box-sizing: border-box;
+  background: linear-gradient(to bottom right, #2C5B8C 42%, #AF8B84 85%);
+  transition: margin-left 0.3s ease;
+}
+
+#sidebar.collapsed + #sidebar-strip + #content {
+  margin-left: 0px; /* Collapsed sidebar width */
+  padding-left: 80px;
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #sidebar {
+      width: 200px; /* Adjusted for smaller screens */
+      transition: width 0.3s ease;
+  }
+
+  #sidebar.collapsed {
+      width: 60px; /* Further reduced for smaller screens */
+  }
+
+  #content {
+      margin-left: 200px;
+      padding: 95px 15px 15px 15px;
+  }
+
+  #sidebar.collapsed + #sidebar-strip + #content {
+      margin-left: 60px;
+  }
+
+  .dashboard-card {
+      flex: 1 1 calc(50% - 20px);
+  }
+
+  /* Adjust DPWH Brand for Mobile */
+  .navbar-brand {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 10px;
+  }
+
+  .navbar-title h3,
+  .navbar-title h5 {
+      text-align: left;
+  }
+
+  /* Adjust logo size on smaller screens */
+  .navbar-logo {
+      width: 40px;
+      height: 40px;
+  }
+
+  /* Adjust sidebar-strip for smaller screens */
+  #sidebar-strip {
+      width: 50px;
+  }
+
+  .strip-square {
+      width: 40px;
+      height: 40px;
+      margin: 8px 0;
+  }
+
+  .strip-square i {
+      font-size: 1.2rem;
+  }
+
+  /* Responsive Profile Section */
+  .profile-info {
+      padding: 8px 15px; /* Further reduced padding */
+  }
+
+  .profile-info img.profile-pic {
+      width: 60px; /* Further reduced */
+      height: 60px; /* Further reduced */
+      margin-bottom: 6px;
+  }
+
+  .profile-info .profile-details h4 {
+      font-size: 14px;
+  }
+
+  .profile-info .profile-details h5,
+  .profile-info .profile-details p {
+      font-size: 11px;
+  }
+
+  .show-projects-btn {
+      padding: 5px 10px;
+      font-size: 13px;
+  }
+
+  /* Center Components in Smaller Screens */
+  .components {
+      align-items: center; /* Center horizontally */
+  }
+
+  .components li {
+      width: 100%; /* Full width in smaller screens */
+      padding: 0 10px;
+  }
+
+  .components ul.collapse {
+      padding-left: 30px; /* Increased indentation for better visibility */
+  }
+
+  /* Hide middle icons on smaller screens */
+  .navbar-middle-icons {
+      display: none;
+  }
+
+  /* Adjust user profile size on smaller screens */
+  .navbar-user-pic {
+      width: 35px;
+      height: 35px;
+  }
+
+  /* Hide user name on smaller screens */
+  .navbar-user-name {
+      display: none;
+  }
+
+  /* Adjust "My Projects" Button on Smaller Screens */
+  .my-projects-button {
+      padding: 8px 15px;
+  }
+
+  .btn-my-projects {
+      padding: 8px 12px;
+      font-size: 14px;
+  }
+
+  .btn-my-projects i {
+      margin-right: 6px;
+      font-size: 1rem;
+  }
+}
+
+/* Additional Role-based border styles */
+.border-admin {
+    border: 3px solid orange;
+}
+
+.border-member {
+    border: 3px solid blue;
+}
+
+.border-guest {
+    border: 3px solid white;
+}
+
+tbody
+{
+  color: white;
+}
+
+.modal-header
+{
+    background-color: #E67040;
+    
+}
+
+.modal-footer
+{
+    background-color: #E67040;
+}
+
+.modal-content
+{
+    background: linear-gradient(to bottom right, #2C5B8C 42%, #AF8B84 85%);
+}
+
+.btn-primary
+{
+    background-color: #E67040;
+    border-color: #E67040;
+    color: black;
+}
+
+.btn-primary:hover
+{
+    background-color: orangered;
+    border-color: orangered;
+}

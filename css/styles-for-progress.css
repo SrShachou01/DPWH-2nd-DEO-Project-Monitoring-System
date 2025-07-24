@@ -1,0 +1,250 @@
+/* Custom styles for the project management page */
+.btn {
+    border-radius: 20px;
+}
+
+.progress {
+    position: relative;
+    height: 30px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+}
+
+.table-container {
+    flex: 1 1 auto;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: auto;  /* Adjust to the desired table height */
+    position: relative;
+}
+
+/* Table Layout and Styling */
+.table {
+    width: 100%; /* Allow the table to expand based on content */
+    table-layout: fixed; /* Ensures that column widths are respected */
+    border-collapse: collapse; /* Ensure borders collapse */
+}
+
+.table td {
+    word-wrap: break-word; /* Force text to wrap inside the cell */
+    overflow: hidden; /* Hide any overflowed text */
+    text-overflow: ellipsis; /* Display ellipsis when text overflows */
+    white-space: normal; /* Ensure the text wraps instead of staying on a single line */
+    z-index: 10;
+}
+
+.table th, .table td {
+    padding: 10px;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table th {
+    background-color: #E67040;
+    color: #fff;
+    text-align: left;
+    position: sticky; /* Make headers sticky */
+    top: 0;
+    z-index: 99; /* Ensure headers stay above cells */
+}
+
+/* Ensure the horizontal scrollbar is always visible */
+.table-container {
+    overflow-x: auto; 
+    overflow-y: visible;
+    position: relative;
+    flex: 1 1 auto;
+}
+
+/* Show horizontal scrollbar */
+.table-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 6px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* Vertical Scrollbar */
+.table-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 6px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* Make the actions column sticky */
+.table .col-actions {
+    position: sticky;
+    right: 0;
+    background-color: white;
+    text-align: center;
+    overflow: visible; /* Ensure the dropdown is visible */
+}
+
+.table th.col-actions {
+    position: sticky;
+    right: 0;
+    background-color: #E67040;
+    overflow: visible; /* Ensure the dropdown is visible */
+}
+
+/* Adjust the dropdown menu to overlay correctly */
+.col-actions .dropdown-menu {
+    position: absolute;
+    max-height: none;
+}
+
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+    .table-container {
+        overflow-y: visible; /* Ensure dropdowns are visible on small screens */
+    }
+
+    .table th,
+    .table td {
+        padding: 5px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .table {
+        min-width: 650px; /* Adjust as needed */
+    }
+
+    /* Ensure dropdowns are still visible on small screens */
+    .col-actions .dropdown-menu {
+        left: auto;
+        right: 0;
+        overflow: visible; /* Ensure the dropdown is visible */
+    }
+}
+
+span {
+    content: "\20B1";
+}
+
+.col-actions {
+    width: 150px;
+    min-width: 50px;
+    overflow: visible; /* Ensure the dropdown is visible */
+}
+
+/* Ensure the percentage text is always visible */
+.progress-bar {
+    color: #fff; /* White text for better contrast */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for better readability */
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000; /* Adjust color for better visibility */
+    font-weight: bold;
+    pointer-events: none;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* Improves readability */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Ensure .position-relative class is defined */
+.position-relative {
+    position: relative;
+}
+
+.modal-header {
+    background-color: #E67040;
+    color: white;
+}
+
+.modal-footer {
+    background-color: #E67040;
+    color: white;
+}
+
+.modal-body {
+    background: linear-gradient(to bottom right, #2C5B8C 42%, #AF8B84 85%);
+    color: white;
+}
+
+.modal-content {
+    background: linear-gradient(to bottom right, #2C5B8C 42%, #AF8B84 85%);
+    color: white;
+}
+
+.btn-primary {
+    background-color: #c15c34;
+    border-color: #c15c34;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: orangered;
+    border-color: orangered;
+}
+
+/* Apply these styles to ensure both Description and Issues columns handle overflow correctly */
+.table td.column {
+    max-width: 300px;  /* Adjust the width as per your requirement */
+    word-wrap: break-word; /* Ensure long text breaks into the next line */
+    overflow: hidden; /* Hide any overflow text */
+    text-overflow: ellipsis; /* Show ellipsis when text is too long */
+    white-space: normal; /* Allow text to wrap inside the cell */
+}
+
+/* Adjustments for larger screens (1920x1200 or larger) */
+@media (min-width: 1200px) and (min-height: 1200px) {
+    /* Increase table container height for better space usage */
+    .table-container {
+        max-height: 70vh; /* Increase height for larger screens (1920x1200) */
+    }
+
+    /* Adjust table minimum width to better fit large screens */
+    .table {
+        min-width: 1800px; /* Adjust for better table fit */
+    }
+
+    /* Make the button sizes larger on bigger screens */
+    .btn {
+        padding: 12px 20px; /* Larger padding for more comfortable buttons */
+        font-size: 1.1rem; /* Slightly larger font size */
+    }
+
+    /* Adjust column widths for larger screens */
+    .col-actions {
+        width: 80px;  /* Increase width for actions column */
+        min-width: 80px;
+    }
+
+    .table th, .table td {
+        padding: 14px; /* More padding for larger screens */
+        font-size: 1.1rem; /* Increase font size */
+    }
+
+    /* Adjust progress bar and text sizes for larger screens */
+    .progress-bar {
+        height: 35px; /* Increase height for better visibility */
+    }
+
+    .progress-text {
+        font-size: 1.3rem; /* Increase font size for better readability */
+    }
+}
+

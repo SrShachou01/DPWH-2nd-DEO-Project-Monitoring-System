@@ -1,0 +1,292 @@
+/* styles-for-projects.css */
+
+/* Custom styles for the project management page */
+
+.btn {
+    border-radius: 20px;
+}
+
+.progress {
+    height: 20px;
+}
+
+/* Default table container styling */
+.table-container {
+    flex: 1 1 auto;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: auto;  /* Adjust to the desired table height */
+    position: relative;
+}
+
+/* Table */
+.table {
+    width: auto; /* Allow the table to expand based on content */
+    min-width: 1500px; /* Adjust as needed */
+    table-layout: fixed; /* Ensures that column widths are respected */
+    border-collapse: collapse; /* Ensure borders collapse */
+}
+
+.table th, .table td {
+    padding: 10px;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table th {
+    background-color: #E67040;
+    color: #fff;
+    text-align: left;
+    position: sticky; /* Make headers sticky */
+    top: 0;
+    z-index: 2; /* Ensure headers stay above cells */
+}
+
+/* Ensure the horizontal scrollbar is always visible */
+.table-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: visible; /* Allow vertical overflow to ensure dropdowns are visible */
+}
+
+/* Show horizontal scrollbar */
+.table-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 6px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* Vertical Scrollbar */
+.table-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 6px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* Make the actions column sticky */
+.table .col-actions {
+    position: sticky;
+    right: 0;
+    background-color: white;
+    text-align: center;
+    overflow: visible; /* Ensure the dropdown is visible */
+}
+
+.table th.col-actions {
+    position: sticky;
+    right: 0;
+    background-color: #E67040;
+    overflow: visible; /* Ensure the dropdown is visible */
+}
+
+/* Adjust the dropdown menu to overlay correctly */
+.col-actions .dropdown-menu {
+    position: absolute; /* Position relative to the button */
+    min-width: 160px; /* Optional: adjust based on the button size */
+    display: none; /* Hide initially, shown on hover or click */
+}
+
+.col-actions .dropdown-toggle {
+    border-radius: 50%; /* Makes the button circular */
+    width: 40px; /* Adjust size */
+    height: 40px; /* Adjust size */
+    padding: 0; /* Remove inner padding */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.col-actions .dropdown-menu.show {
+    display: block;
+    z-index: 9999; /* Ensure dropdown appears above other elements */
+}
+
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+    .table-container {
+        overflow-y: visible; /* Ensure dropdowns are visible on small screens */
+    }
+
+    .table th,
+    .table td {
+        padding: 5px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .table {
+        min-width: 650px; /* Adjust as needed */
+    }
+
+    /* Ensure dropdowns are still visible on small screens */
+    .col-actions .dropdown-menu {
+        left: auto;
+        right: 0;
+    }
+}
+
+/* Adjustments for larger screens (1920x1200 or larger) */
+@media (min-height: 1200px) {
+    /* Increase table container height for better space usage */
+    .table-container {
+        max-height: 480px;  /* Increase height for larger screens */
+    }
+
+    /* Adjust table minimum width to better fit large screens */
+    .table {
+        min-width: 1600px; /* Adjust for better table fit */
+    }
+
+    /* Make the button sizes larger on bigger screens */
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    
+    /* Adjust column widths for larger screens */
+    .col-proj-id {
+        width: 100px;
+    }
+
+    .col-proj-name {
+        width: 250px;
+    }
+
+    .col-contractor {
+        width: 180px;
+    }
+
+    .col-budget {
+        width: 150px;
+    }
+
+    .col-contract-duration {
+        width: 80px;
+    }
+
+    .col-start-date {
+        width: 150px;
+    }
+
+    .col-end-date {
+        width: 150px;
+    }
+
+    .col-progress {
+        width: 150px;
+    }
+
+    .col-status {
+        width: 100px;
+    }
+
+    .col-actions {
+        width: 100px;
+        min-width: 100px;
+    }
+}
+
+span {
+    content: "\20B1";
+}
+
+/* Optional: Adjust column widths */
+.col-proj-id {
+    width: 80px;
+}
+
+.col-proj-name {
+    width: 300px;
+}
+
+.col-budget {
+    width: 100px;
+}
+
+.col-contract-duration {
+    width: 200px;
+}
+
+.col-start-date {
+    width: 10px;
+}
+
+.col-end-date {
+    width: 10px;
+}
+
+.col-status {
+    width: 50px;
+}
+
+.col-actions {
+    width: 80px;
+    min-width: 80px;
+}
+
+/* Ensure the percentage text is always visible */
+.progress-bar {
+    color: #fff; /* White text for better contrast */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for better readability */
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000; /* Adjust color for better visibility */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* Optional: Improves readability */
+    pointer-events: none; /* Ensures text doesn't interfere with any interactions */
+}
+
+/* Ensure .position-relative class is defined */
+.position-relative {
+    position: relative;
+}
+
+.modal-header {
+    background-color: #E67040;
+    color: white;
+}
+
+.modal-footer {
+    background-color: #E67040;
+    border-color: #c15c34;
+    color: white;
+}
+
+.modal-content {
+    background: linear-gradient(to bottom right, #2C5B8C 42%, #AF8B84 85%);
+    color: white;
+}
+
+.btn-primary {
+    background-color: #c15c34;
+    border-color: #c15c34;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: orangered;
+    border-color: orangered;
+}

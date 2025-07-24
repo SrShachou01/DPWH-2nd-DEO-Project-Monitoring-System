@@ -1,0 +1,24 @@
+[18-Mar-2025 05:29:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'u733311923_dpwhpms.contract_work_suspension' doesn't exist in /home/u733311923/domains/dpwhprojectmonitoring.com/public_html/project-management/generate-report-pdf.php:178
+Stack trace:
+#0 /home/u733311923/domains/dpwhprojectmonitoring.com/public_html/project-management/generate-report-pdf.php(178): mysqli->query()
+#1 {main}
+  thrown in /home/u733311923/domains/dpwhprojectmonitoring.com/public_html/project-management/generate-report-pdf.php on line 178
+[18-Mar-2025 05:30:19 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-work-suspension WHERE proj_ID = '19FL0011'' at line 1 in /home/u733311923/domains/dpwhprojectmonitoring.com/public_html/project-management/generate-report-pdf.php:178
+Stack trace:
+#0 /home/u733311923/domains/dpwhprojectmonitoring.com/public_html/project-management/generate-report-pdf.php(178): mysqli->query()
+#1 {main}
+  thrown in /home/u733311923/domains/dpwhprojectmonitoring.com/public_html/project-management/generate-report-pdf.php on line 178
+[18-Mar-2025 05:31:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function shell_exec() in /home/u733311923/domains/dpwhprojectmonitoring.com/public_html/project-management/generate-report-pdf.php:166
+Stack trace:
+#0 {main}
+  thrown in /home/u733311923/domains/dpwhprojectmonitoring.com/public_html/project-management/generate-report-pdf.php on line 166
+[18-Mar-2025 05:34:14 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-work-suspension WHERE proj_ID = '19FL0011'' at line 1 in /home/u733311923/domains/dpwhprojectmonitoring.com/public_html/project-management/generate-report-pdf.php:179
+Stack trace:
+#0 /home/u733311923/domains/dpwhprojectmonitoring.com/public_html/project-management/generate-report-pdf.php(179): mysqli->query()
+#1 {main}
+  thrown in /home/u733311923/domains/dpwhprojectmonitoring.com/public_html/project-management/generate-report-pdf.php on line 179
+[18-Mar-2025 06:14:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-work-suspension WHERE proj_ID = '19FL0011'' at line 1 in /home/u733311923/domains/dpwhprojectmonitoring.com/public_html/project-management/generate-report-pdf.php:236
+Stack trace:
+#0 /home/u733311923/domains/dpwhprojectmonitoring.com/public_html/project-management/generate-report-pdf.php(236): mysqli->query()
+#1 {main}
+  thrown in /home/u733311923/domains/dpwhprojectmonitoring.com/public_html/project-management/generate-report-pdf.php on line 236

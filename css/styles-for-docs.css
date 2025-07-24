@@ -1,0 +1,244 @@
+/* Container Styling */
+.documents-container {
+    padding-top: 20px;
+}
+
+/* Table Styling */
+.documents-table {
+    width: 100%; /* Table will take up the full container width */
+    table-layout: fixed; /* Ensures column widths are respected */
+    border-collapse: collapse; /* Collapsing table borders */
+    min-width: 1600px;  /* Minimum table width to ensure scrolling */
+}
+
+.documents-table th {
+    background-color: #E67040;
+    color: white;
+}
+
+/* Table Header and Data Cells */
+.documents-table th, .documents-table td {
+    padding: 12px; /* Increased padding for better spacing */
+    vertical-align: middle; /* Center content vertically */
+    overflow: visible; /* Allow content to be fully visible */
+    text-overflow: unset; /* Prevent truncation of text */
+    white-space: normal; /* Allow text wrapping */
+    font-size: 1rem; /* Increased font size */
+}
+
+/* Table Header Styling */
+.documents-table th {
+    background-color: #E67040;
+    color: #fff;
+    text-align: left;
+    position: sticky; /* Makes headers sticky */
+    top: 0;
+    z-index: 99; /* Ensures headers stay above cells */
+}
+
+/* Container with horizontal and vertical scrolling */
+.documents-table-container {
+    overflow-x: auto;  /* Enables horizontal scrolling */
+    overflow-y: auto;  /* Enables vertical scrolling */
+    max-height: auto;   /* Limits vertical height for scrolling */
+    width: 100%;        /* Ensure the container takes full width */
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on mobile */
+}
+
+/* Scrollbar Styling */
+.documents-table-container::-webkit-scrollbar {
+    height: 8px;  /* Reduced scrollbar height */
+}
+
+.documents-table-container::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 4px;
+}
+
+.documents-table-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* Actions Column Styling */
+.documents-table .col-doc-actions {
+    position: sticky;
+    right: 0;
+    background-color: white;
+    text-align: center;
+    overflow: visible; /* Ensure the dropdown is visible */
+}
+
+.documents-table th.col-doc-actions {
+    position: sticky;
+    right: 0;
+    background-color: #E67040;
+    overflow: visible; /* Ensure the dropdown is visible */
+}
+
+.col-doc-actions .dropdown-menu {
+    z-index: 9999; /* Ensure dropdown is above other elements */
+    position: absolute;
+    max-height: none;
+}
+
+/* Button Styling */
+.documents-table .btn {
+    font-size: large;
+}
+
+/* Override Bootstrap's btn-sm to increase button size */
+.documents-table .btn-sm {
+    padding: 0.5rem 0.75rem; /* Increased padding */
+    font-size: 1rem; /* Increased font size */
+    border-radius: 0.3rem; /* Optional: Slightly larger border radius */
+}
+
+/* Adjust icon sizes within buttons */
+.documents-table .btn-sm i {
+    font-size: 1rem; /* Match icon size to button text */
+}
+
+/* Column Adjustments */
+.col-doc-type {
+    width: 35%; /* Adjusted Type column to 35% */
+    min-width: 150px; /* Ensure readability */
+}
+
+.col-doc-actions {
+    width: 10%; /* Adjusted Actions column to 10% */
+    min-width: 50px; /* Ensure buttons fit */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .documents-table-container {
+        max-height: 60vh; /* Adjusted for smaller screens */
+    }
+
+    .documents-table th,
+    .documents-table td {
+        padding: 10px; /* Adjusted padding for larger font */
+        font-size: 0.95rem; /* Slightly reduced font size for smaller screens */
+    }
+
+    .documents-table .btn-sm {
+        padding: 0.4rem 0.6rem; /* Adjusted padding */
+        font-size: 0.9rem; /* Adjusted font size */
+    }
+
+    .col-doc-type {
+        width: 35%;
+        min-width: 100px;
+    }
+
+    .col-doc-actions {
+        width: 20%;
+        min-width: 80px;
+    }
+
+    /* Ensure dropdowns are still visible on small screens */
+    .col-doc-actions .dropdown-menu {
+        left: auto;
+        right: 0;
+    }
+
+    /* Adjust status-select width for smaller screens */
+    .status-select {
+        width: 120px;
+    }
+}
+
+/* Adjustments for larger screens (1920x1200 or larger) */
+@media (min-height: 1200px) {
+    /* Increase the max height of table container for larger screens */
+    .documents-table-container {
+        max-height: 60vh; /* Adjusted to take advantage of more vertical space */
+    }
+
+    /* Adjust the table width for larger screens */
+    .documents-table {
+        min-width: 1400px; /* Increase minimum table width */
+    }
+
+    /* Make buttons slightly larger */
+    .documents-table .btn-sm {
+        padding: 0.6rem 0.9rem; /* Slightly larger padding */
+        font-size: 1.1rem; /* Slightly larger font size */
+    }
+
+    /* Adjust the column widths for larger screens */
+    .col-doc-type {
+        width: 40%; /* Increased width for Type column */
+        min-width: 180px; /* Ensure better readability */
+    }
+
+    .col-doc-actions {
+        width: 12%; /* Adjusted Actions column to 12% */
+        min-width: 50px; /* Ensure buttons fit */
+    }
+
+    /* Adjust font sizes and spacing for larger screens */
+    .documents-table th,
+    .documents-table td {
+        font-size: 1.1rem; /* Larger font size for larger screens */
+    }
+
+    /* Adjust status-select width for larger screens */
+    .status-select {
+        width: 140px; /* Adjust for larger screen size */
+    }
+}
+
+/* Modal Styling */
+.modal-header {
+    background-color: #E67040;
+    color: white;
+}
+
+.modal-footer {
+    background-color: #E67040;
+    color: white;
+}
+
+.modal-body {
+    background: linear-gradient(to bottom right, #2C5B8C 42%, #AF8B84 85%);
+    color: white;
+}
+
+.modal-content {
+    background: linear-gradient(to bottom right, #2C5B8C 42%, #AF8B84 85%);
+    color: white;
+}
+
+.btn-primary {
+    background-color: #c15c34;
+    border-color: #c15c34;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: orangered;
+    border-color: orangered;
+}
+
+.col-doc-actions .dropdown-toggle::after {
+    display: none;
+}
+
+.col-doc-actions .dropdown-toggle {
+    border-radius: 50%; /* Makes the button circular */
+    width: 40px; /* Adjust size */
+    height: 40px; /* Adjust size */
+    padding: 0; /* Remove inner padding */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.col-doc-attachment .ellipsis {
+    display: inline-block;
+    max-width: 300px; /* Set the max width to fit your layout */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
