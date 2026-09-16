@@ -10,22 +10,17 @@
 
 <div align="center">
 
-<!-- YouTube Clickable Video Showcase (GitHub automatically renders this with a play preview) -->
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-  <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" width="85%" style="border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.2);" alt="DPWH 2nd DEO Project Monitoring System Video Walkthrough">
-</a>
+https://github.com/user-attachments/assets/99889b13-de4d-482f-ab0f-7aa29af3a442
 
-<p>
-  <b>▶ <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">"DPWH 2nd DEO Project Monitoring System — Video Walkthrough"</a> · Click to Watch on YouTube</b>
-</p>
+<b>▶ "DPWH 2nd DEO Project Monitoring System — Video Walkthrough"</b>
 
 </div>
 
 <table>
   <tr>
-    <td width="33%"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://i.guim.co.uk/img/media/9d9b0fcdd73aae889672edb06e34828460c2001a/0_764_4480_5576/master/4480.jpg?width=1020&dpr=2&s=none&crop=none" width="100%" alt="District Overview"></a></td>
-    <td width="33%"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9EQP56cyXu0XO-4bCbPBXfg0uLDx3cEs7f8gkn--Uiw&s" width="100%" alt="Infrastructure Inspection"></a></td>
-    <td width="33%"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://i.ytimg.com/vi/jzmz6K8K4L0/hqdefault.jpg" width="100%" alt="Project Tracking"></a></td>
+    <td width="33%"><a href="https://github.com/user-attachments/assets/99889b13-de4d-482f-ab0f-7aa29af3a442"><img src="https://i.guim.co.uk/img/media/9d9b0fcdd73aae889672edb06e34828460c2001a/0_764_4480_5576/master/4480.jpg?width=1020&dpr=2&s=none&crop=none" width="100%" alt="District Overview"></a></td>
+    <td width="33%"><a href="https://github.com/user-attachments/assets/99889b13-de4d-482f-ab0f-7aa29af3a442"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9EQP56cyXu0XO-4bCbPBXfg0uLDx3cEs7f8gkn--Uiw&s" width="100%" alt="Infrastructure Inspection"></a></td>
+    <td width="33%"><a href="https://github.com/user-attachments/assets/99889b13-de4d-482f-ab0f-7aa29af3a442"><img src="https://i.ytimg.com/vi/jzmz6K8K4L0/hqdefault.jpg" width="100%" alt="Project Tracking"></a></td>
   </tr>
   <tr>
     <td align="center"><sub>District Infrastructure Scope</sub></td>
